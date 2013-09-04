@@ -26,6 +26,7 @@ def main():
 
     # If we already have a backup from this month, we can bail here
     if backup_file:
+        print 'Already have a backup from this month'
         return
 
     # Otherwise, try to find a backup from this month in the source directory
@@ -33,6 +34,7 @@ def main():
 
     # If we didn't find a backup from this month, give up
     if not backup_file:
+        print 'Didn\'t find a backup from this month'
         return
 
     # Otherwise, copy the backup from the source dir to the destination dir
